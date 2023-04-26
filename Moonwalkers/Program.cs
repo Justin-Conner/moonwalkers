@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+//var connectionString = builder.Configuration.GetConnectionString("InventoryDbContextConnection") ?? throw new InvalidOperationException("Connection string 'InventoryDbContextConnection' not found.");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -31,7 +32,7 @@ var serverVersion = new MySqlServerVersion(new Version(8, 0, 32));
 builder.Services.AddDbContext<InventoryDbContext>(dbContextOptions => dbContextOptions.UseMySql(connectionString, serverVersion));
 
 //--- end of connection syntax
-
+builder.Services.AddRazorPages();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -43,7 +44,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.MapRazorPages();
+app.MapControllers(); 
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
