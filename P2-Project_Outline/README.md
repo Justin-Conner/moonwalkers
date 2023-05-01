@@ -7,12 +7,17 @@ For this assignment, you will submit a high-level outline of your project. This 
 ## Submission Instructions
 
 ### Overview
-Include overview here
+My project is to create an inventory management system.  The intent of this project is to create a viable product to use as a revenue stream for my LLC Ohm Lotus Phoenix. I intend on incorporating a POS and inventory management through QR code reader apps available on IOS and Android to mange product statuses.
 ### Features
-Include Features here
+Phone scanning of product barcodes and qrcodes
+Account registration login and authentication
+qrcode/barcode creation for new products
+Point of Sale functionality
+Supplier API for inventory purchase data
+reporting functionality of inventory and sales data
 ### Technologies
-Include Technologies here
+C#, API and MySQL
 ### What I'll Have to Learn
-Include what you will need to learn here
+In this project I will learn API usage, MVC design pattern, Identity user authentication, Xamarin smart phone development, Aforge artificial intelligence and vision framework.
 ### Project Tracker
-Link to your Trello board here
+https://trello.com/b/E3rUZSNx/final-project
